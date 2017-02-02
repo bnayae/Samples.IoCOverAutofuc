@@ -22,7 +22,15 @@ namespace Bnaya.Samples
             foreach (var c in cs)
             {
                 string d = c.Format(10);
-                Console.WriteLine(d);
+                Console.WriteLine($"{d.GetHashCode()}: {d}");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Hash code should be the same for singleton");
+            cs = container.Resolve<IEnumerable<IConvention>>();
+            foreach (var c in cs)
+            {
+                string d = c.Format(10);
+                Console.WriteLine($"{d.GetHashCode()}: {d}");
             }
 
             Console.ReadKey();
