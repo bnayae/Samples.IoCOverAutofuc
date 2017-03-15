@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plug-ins", "Plug-ins", "{1BAF5A1D-267C-4A9C-BDE7-BE55F86E74E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comp[onentUnitTests", "Comp[onentUnitTests\Comp[onentUnitTests.csproj", "{8163CA78-0F85-4176-A2E8-7B1B9256AD00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentUnitTests", "Comp[onentUnitTests\ComponentUnitTests.csproj", "{8163CA78-0F85-4176-A2E8-7B1B9256AD00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

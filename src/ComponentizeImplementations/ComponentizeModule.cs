@@ -11,8 +11,13 @@ namespace Bnaya.Samples
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<Foo>().As<IFoo>();
-            builder.RegisterType<BeepIt>().As<IBeep>();
+            builder.RegisterType<Foo>().As<IFoo>()
+                   .SingleInstance();
+            builder.RegisterType<SpecialFoo>()
+                    .Keyed<IFoo>("Special")
+                   .SingleInstance();
+            builder.RegisterType<BeepIt>().As<IBeep>()
+                   .SingleInstance();
         }
     }
 }

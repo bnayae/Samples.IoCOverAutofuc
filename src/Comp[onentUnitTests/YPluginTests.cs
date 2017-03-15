@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Bnaya.Samples;
 using Moq;
 
-namespace Comp_onentUnitTests
+namespace ComponentUnitTests
 {
     [TestClass]
     public class YPluginTests
