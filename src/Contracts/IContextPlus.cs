@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bnaya.Samples
 {
-    public class XPlugin : IConvention
+    public interface IContextPlus: IContext
     {
-        public XPlugin()
-        {
-
-        }
-        public string Format(int i) => new string('*', i);
+        void Log();
     }
 }

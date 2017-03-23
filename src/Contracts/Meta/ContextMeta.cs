@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Bnaya.Samples
 {
-    public class XPlugin : IConvention
+    public class ContextMeta
     {
-        public XPlugin()
-        {
-
-        }
-        public string Format(int i) => new string('*', i);
+        [DefaultValue("Undefine")]
+        public string Category { get; set; }
     }
 }

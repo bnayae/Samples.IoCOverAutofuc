@@ -15,27 +15,32 @@ namespace Bnaya.Samples
         {
             IContainer container = Initialize();
 
-            var f = container.Resolve<IFoo>();
-            var f1 = container.ResolveKeyed<IFoo>("Special");
-            f.Write();
+            //var f = container.Resolve<IFoo>();
+            //var f1 = container.ResolveKeyed<IFoo>("Special");
+            //f.Write();
 
-            var cs = container.Resolve<IEnumerable<IConvention>>();
-            var cs1 = container.Resolve<IEnumerable<IConvention>>();
-            foreach (var c in cs)
-            {
-                string d = c.Format(10);
-                Console.WriteLine($"{d.GetHashCode()}: {d}");
-            }
-            Console.WriteLine();
-            Console.WriteLine("Hash code should be the same for singleton");
-            cs = container.Resolve<IEnumerable<IConvention>>();
-            cs = container.Resolve<IEnumerable<IConvention>>();
-            foreach (var c in cs)
-            {
-                string d = c.Format(10);
-                Console.WriteLine($"{d.GetHashCode()}: {d}");
-            }
+            //var cs = container.Resolve<IEnumerable<IConvention>>();
+            //var cs1 = container.Resolve<IEnumerable<IConvention>>();
+            //foreach (var c in cs)
+            //{
+            //    string d = c.Format(10);
+            //    Console.WriteLine($"{d.GetHashCode()}: {d}");
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("Hash code should be the same for singleton");
+            //cs = container.Resolve<IEnumerable<IConvention>>();
+            //cs = container.Resolve<IEnumerable<IConvention>>();
+            //foreach (var c in cs)
+            //{
+            //    string d = c.Format(10);
+            //    Console.WriteLine($"{d.GetHashCode()}: {d}");
+            //}
 
+            IAlternateExecuter executer = container.Resolve<IAlternateExecuter>();
+            for (int i = 0; i < 5; i++)
+            {
+                executer.Run();
+            }
             Console.ReadKey();
         }
 
@@ -50,7 +55,10 @@ namespace Bnaya.Samples
                    .SingleInstance();
             builder.RegisterType<Bar>()
                     .AsImplementedInterfaces()
-                   .SingleInstance();
+                    .SingleInstance();
+            builder.RegisterType<CheapExecution>()
+                    .Keyed<IAlternate>(InstanceTypes.Cheap)
+                    .SingleInstance();
             //builder.RegisterType<NPlugin>()
             //        .AsImplementedInterfaces();
             builder.Register(c =>
@@ -76,6 +84,10 @@ namespace Bnaya.Samples
             //}
             path = Path.GetFullPath("ComponentizeImplementations.dll");
             var asmComp = Assembly.LoadFile(path);
+            builder.RegisterAssemblyModules(asmComp);
+
+            path = Path.GetFullPath("ComponentizeAutofacAware.dll");
+            asmComp = Assembly.LoadFile(path);
             builder.RegisterAssemblyModules(asmComp);
 
             //asmComp = typeof(Bar).Assembly;

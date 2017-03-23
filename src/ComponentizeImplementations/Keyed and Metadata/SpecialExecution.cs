@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Bnaya.Samples
 {
-    public class XPlugin : IConvention
+    public class SpecialExecution : IAlternate
     {
-        public XPlugin()
+        public void Execute()
         {
-
+            Console.WriteLine("This is special");
         }
-        public string Format(int i) => new string('*', i);
     }
 }

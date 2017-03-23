@@ -44,11 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Meta\ContextMeta.cs" />
+    <Compile Include="IContextPlus.cs" />
+    <Compile Include="IContext.cs" />
+    <Compile Include="IAlternateExecuter.cs" />
+    <Compile Include="IAlternate.cs" />
     <Compile Include="IBar.cs" />
     <Compile Include="IBeep.cs" />
     <Compile Include="IConvention.cs" />
     <Compile Include="IColor.cs" />
     <Compile Include="IFoo.cs" />
+    <Compile Include="InstanceTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

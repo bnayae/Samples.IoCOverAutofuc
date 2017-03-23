@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Bnaya.Samples
 {
-    public class XPlugin : IConvention
+    public class CheapExecution : IAlternate
     {
-        public XPlugin()
+        public void Execute()
         {
-
+            Console.WriteLine("Very cheap choice");
         }
-        public string Format(int i) => new string('*', i);
     }
 }

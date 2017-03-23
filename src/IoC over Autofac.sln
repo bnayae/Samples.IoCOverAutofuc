@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plug-ins", "Plug-ins", "{1B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentUnitTests", "Comp[onentUnitTests\ComponentUnitTests.csproj", "{8163CA78-0F85-4176-A2E8-7B1B9256AD00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentizeAutofacAware", "ComponentizeAutofacAware\ComponentizeAutofacAware.csproj", "{A3691EE5-8DD0-4F43-A788-CCB7B4952B51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{8163CA78-0F85-4176-A2E8-7B1B9256AD00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8163CA78-0F85-4176-A2E8-7B1B9256AD00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8163CA78-0F85-4176-A2E8-7B1B9256AD00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3691EE5-8DD0-4F43-A788-CCB7B4952B51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3691EE5-8DD0-4F43-A788-CCB7B4952B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3691EE5-8DD0-4F43-A788-CCB7B4952B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3691EE5-8DD0-4F43-A788-CCB7B4952B51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,5 +61,6 @@ Global
 		{04790EE1-749E-4431-AC61-5B8907A912AF} = {1BAF5A1D-267C-4A9C-BDE7-BE55F86E74E3}
 		{A6FEBD96-20EE-4B9D-934D-D78F0D428F97} = {1BAF5A1D-267C-4A9C-BDE7-BE55F86E74E3}
 		{9067A49A-DA02-4747-A16B-AF7821E07BDF} = {1BAF5A1D-267C-4A9C-BDE7-BE55F86E74E3}
+		{A3691EE5-8DD0-4F43-A788-CCB7B4952B51} = {1BAF5A1D-267C-4A9C-BDE7-BE55F86E74E3}
 	EndGlobalSection
 EndGlobal

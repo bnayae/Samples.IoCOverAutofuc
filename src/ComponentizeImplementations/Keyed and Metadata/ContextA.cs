@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Bnaya.Samples
 {
-    public class XPlugin : IConvention
+    public class ContextA : IContext
     {
-        public XPlugin()
+        public void Log()
         {
-
+            Console.WriteLine("Context A");
         }
-        public string Format(int i) => new string('*', i);
     }
 }

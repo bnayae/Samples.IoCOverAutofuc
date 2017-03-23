@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bnaya.Samples
 {
-    public class XPlugin : IConvention
+    public interface IAlternateExecuter
     {
-        public XPlugin()
-        {
-
-        }
-        public string Format(int i) => new string('*', i);
+        void Run();
     }
 }
