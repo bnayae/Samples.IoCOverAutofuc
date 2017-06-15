@@ -1,0 +1,20 @@
+Presentation order:
+- Contract
+- Components
+
+- At this stage TheLogic.cs is ready for testing
+	Discuss the need of Mocking (slides)
+
+- Testing (TheLogicTests.cs)
+  Testing can happens before having the Infra or provider implementation
+  this test don't need Autofac (constructor injection) 
+
+- Infra (discuss the deep dependencies chain)
+- WinEventLogProvider (another example of deep dependencies chain)
+- TraceLogProvider (Open close principle allow to add extension without changing the infra - IoC help to resolve dependencies)
+- FileConfigProvider (can be replaced at any time with DB or Service implementation)
+
+- Show the [Dependency Map.dgml] see that there is no concrete 
+	dependencies between non hosting components (all goes via the Contracts)
+
+- Hosting (the only place where Autofac is used)
