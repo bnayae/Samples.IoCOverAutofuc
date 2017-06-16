@@ -13,7 +13,7 @@ namespace FileConfigProvider
 {
     public class FileSettingProvider : IConfiguration
     {
-        private readonly string _configFolder = "Configuration";
+        private readonly string _configFolder;
         private readonly ILoggerProvider _logger;
 
         public FileSettingProvider(
@@ -24,7 +24,10 @@ namespace FileConfigProvider
             IIndex<ConfigModes, IFolderSelector> configFolderSelector)
         {
             _logger = logger;
-            _configFolder = configFolderSelector[cfgMode.Mode].Folder;
+
+            var mode = cfgMode.Mode;
+            var selection = configFolderSelector[mode];
+            _configFolder = selection.Folder;
             if (!Directory.Exists(_configFolder))
                 Directory.CreateDirectory(_configFolder);
         }
